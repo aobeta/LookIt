@@ -1,0 +1,45 @@
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="action.js"></script>
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+
+body{
+  margin: 0px;
+  padding: 20px;
+  overflow: hidden;
+  width: 300px;
+  background: #cccccc;
+}
+
+#content{
+  background: #f2f2f2;
+  width: 250px;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+  transition: height 2s;
+
+}
+input{
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  width: 230px;
+  text-indent: 15px;
+}
+input:focus{
+  outline: none;
+}
+</style>
+</head>
+<body>
+
+    <input type="text" placeholder="Search term..." onkeypress="checkE(event)" onkeyup="checkE(event)">
+    <button onclick="display()">click </button>
+  <div id="content">
+    yo
+  </div>
+</body>
+</html>

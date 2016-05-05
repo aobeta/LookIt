@@ -1,32 +1,33 @@
 <html>
 <head>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script src="action.js"></script>
-   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 <style>
 
 body{
   margin: 0px;
   padding: 20px;
   overflow: hidden;
-  width: 300px;
+  width: 280px;
   background: #cccccc;
 }
 
 #content{
   background: #f2f2f2;
   width: 250px;
+  height: 0;
+  max-height: 250px;
+  overflow-y: hidden;
   border-radius: 5px;
   padding: 15px;
   margin-top: 15px;
-  transition: height 2s;
-
+  transition: height 10s,max-height 4s, opacity 3s;
+  opacity: 0;
 }
 input{
   border: none;
   border-radius: 10px;
   padding: 7px;
-  width: 230px;
+  width: 250px;
   text-indent: 15px;
 }
 input:focus{
@@ -36,10 +37,12 @@ input:focus{
 </head>
 <body>
 
-    <input type="text" placeholder="Search term..." onkeypress="checkE(event)" onkeyup="checkE(event)">
-    <button onclick="display()">click </button>
+    <input type="text" placeholder="Search term..." id="search">
+
+
   <div id="content">
-    yo
+
   </div>
+  <script src="action.js"></script>
 </body>
 </html>
